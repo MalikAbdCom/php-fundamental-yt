@@ -7,13 +7,20 @@ $products = [
     ['name' => 'lightning bolt', 'price' => 40],
     ['name' => 'banana skin', 'price' => 2]
 ];
-foreach ($products as $product) {
-    if ($product["price"] < 20 ){
-        echo $product["name"] . " has price of "  . $product["price"];
-        echo "<br/>";
+$malik= "asdfasdfasdf";
+function fff ($para){
+    $para = "123123132";
+    echo $para;
+    function uuu(){
+        echo "hello";
+        $para = null;
+        echo var_dump($para);
     }
-}
+    uuu();
 
+}
+fff($malik);
+echo $malik ;
 ?>
 
 <!doctype html>
@@ -29,15 +36,7 @@ foreach ($products as $product) {
 <header>
     <h1 style="text-transform: capitalize">Malik Abdullah</h1>
     <hr>
-    <ul>
-        <?php foreach ($products as $product    ){?>
-        <?php if ($product["price"] < 25){?>
-                <li>
-                    <?php echo $product["name"] . " " . "has price of " . $product["price"]; ?>
-                </li>
-            <?php   } ?>
-        <?php } ?>
-    </ul>
+
 </header>
 </body>
 </html>
