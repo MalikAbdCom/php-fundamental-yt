@@ -1,10 +1,17 @@
 <?php
-
+// set a variable to store the database
+$conn = mysqli_connect("localhost", "malik", "HL4usghYe9VsSr", "the_net_ninja_tutorial_basic");
+// check if database is exist, be sure to check everything is right
+if (!$conn) {
+    echo "your data base :" . mysqli_connect_error();
+} else {
+    print_r($conn);
+}
 ?>
 
 <!doctype html>
 <html lang="en">
-<?php require "modules/header.php";?>
-<p class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus assumenda atque dolore ducimus illo ipsa labore laboriosam mollitia obcaecati officiis possimus quaerat quam quasi quidem quo rem repellendus reprehenderit, sed totam veritatis voluptatibus voluptatum. Adipisci alias aliquam aliquid aut blanditiis consequuntur cum cumque deleniti dolore, dolores eos et, hic illo illum in ipsam ipsum libero magnam magni maiores minus molestias mollitia natus nemo nostrum obcaecati omnis porro provident quas qui quisquam reiciendis sequi sint temporibus tenetur velit veritatis! Hic illum inventore odio quod repellat. At autem debitis est eum fuga nostrum, perferendis reprehenderit sit unde velit! A ab asperiores assumenda autem beatae consequuntur cum delectus dignissimos dolores ducimus eius et eum exercitationem, explicabo fuga harum, ipsa itaque laboriosam laborum minus molestiae necessitatibus numquam omnis placeat quos repellendus repudiandae sed sequi similique sint sunt tenetur ut veniam? Doloribus eligendi neque perspiciatis recusandae repudiandae similique veritatis voluptas. Blanditiis dolor est iste iusto nemo quia repellendus unde voluptates. Corporis illo minus rerum sunt unde! Aut commodi consequuntur cupiditate delectus distinctio doloremque doloribus, explicabo libero, magni minima necessitatibus porro quasi quo ratione reiciendis reprehenderit sequi vel veritatis vero voluptate! Adipisci alias aliquid deleniti dolorum ipsum nihil odio odit porro soluta veritatis. Aliquam aliquid animi aperiam aspernatur at aut autem consequatur cumque debitis deserunt dolorem ea eaque esse est et eum eveniet fuga impedit incidunt iste minima minus molestias, mollitia neque, nesciunt nihil obcaecati officia placeat porro quae quam quo quod tenetur totam velit voluptas voluptatum! Blanditiis consequatur culpa deserunt dolorum error, exercitationem molestias perferendis recusandae rerum, sunt, vitae voluptate voluptatem? Animi aspernatur nesciunt officiis placeat voluptate! Consequatur culpa ea eum itaque magnam, quibusdam quisquam rem repudiandae sunt voluptatum? Architecto corporis dignissimos expedita ipsum molestiae, obcaecati quibusdam reiciendis! Accusamus assumenda at aut blanditiis consectetur consequatur cumque cupiditate debitis deleniti dolor dolorem doloremque ea eum ex expedita explicabo fugiat illum in ipsam itaque, laudantium magni minus modi molestiae mollitia necessitatibus non nostrum placeat possimus quaerat quibusdam reiciendis saepe sint sit, ut vel voluptas. Ab ad adipisci animi aperiam atque blanditiis dolor dolore dolores doloribus dolorum ducimus eaque excepturi incidunt laboriosam magni nam neque nobis, nulla officia placeat possimus provident quaerat, quam quia quidem quis ratione repudiandae sed tempora tenetur totam vel veritatis voluptate. Animi aspernatur atque corporis incidunt mollitia odit quo. Aliquam error exercitationem natus officia perferendis praesentium quos totam? Ad aliquam amet aspernatur autem consequuntur dolorem, eius expedita fugit impedit nam nobis quam, quibusdam saepe sapiente sed sint sunt ut? A alias aliquid animi deleniti, dolore dolorem earum eos expedita, hic illum itaque laudantium, maxime minima modi neque odio quo repudiandae similique sit unde vero vitae voluptate. A adipisci autem blanditiis consectetur consequatur consequuntur culpa cumque dicta dignissimos dolor ducimus eius exercitationem facere fugiat impedit ipsam iste, itaque laboriosam nam nesciunt, nulla odit officiis omnis optio possimus quasi quo, recusandae rem sed sint sunt ullam veniam voluptas. A accusamus, aspernatur assumenda atque consequatur delectus doloremque dolorum ea eligendi ex, fuga id illo labore modi nihil nulla odit officiis omnis praesentium quasi saepe tempore voluptatibus!</p>
-<?php   require "modules/footer.php"?>
+<?php require "modules/header.php"; ?>
+
+<?php require "modules/footer.php" ?>
 </html>
