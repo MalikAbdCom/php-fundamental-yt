@@ -14,12 +14,12 @@ $items_form = mysqli_fetch_all($value_tnn, MYSQLI_ASSOC); /*sampai sini, data su
 // setelah data ada, ada baiknya kita menghapus data dari memory karena sudah tidak di perlukan. untuk keamanan juga.
 mysqli_free_result($value_tnn);
 mysqli_close($conn);
-echo "<pre>";
-print_r($items_form);
-echo "</pre>";
-echo "<pre>";
-var_dump($items_form[0]["email"]);
-echo "</pre>";
+//echo "<pre>";
+//print_r($items_form);
+//echo "</pre>";
+//echo "<pre>";
+//var_dump($items_form[0]["email"]);
+//echo "</pre>";
 ?>
 
 <!doctype html>
