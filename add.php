@@ -1,42 +1,56 @@
 <?php
+include "config/connect_mysql.php";
 $pesan = $alamat = $email = '';
-$arrError = array("email" => '', "pesan" => '', "alamat"=> '');
+$arrError = array("email" => '', "pesan" => '', "alamat" => '');
+
 if (isset($_POST['submit'])) {
-    //                  email
+//                  email
     if ($_POST['email']) {
         $email = $_POST['email']; //string isi input
         if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $arrError['email'] = "your email is invalid woeeee !!!";
-        } else {
-            $arrError['email'] = "your email is " . htmlspecialchars($_POST['email']);
         }
     } else {
         $arrError['email'] = "please provide your email for registration!";
     }
 
-    //                  alamat
-    if (!$_POST['alamat']){
+//                  alamat
+    if (!$_POST['alamat']) {
         $arrError['alamat'] = "please provide you alamat bambang !!!";
-    }else{
+    } else {
         $alamat = $_POST['alamat'];
-        if (!preg_match("/^[a-z]*$/", $_POST["pesan"])){
+        if (!preg_match("/^[a-z]*$/", $_POST["pesan"])) {
             $arrError['alamat'] = "alamat mu engga valid bambang";
-        }else{
-            $arrError['alamat'] = "ini adalah alamatmu " . htmlspecialchars($_POST["alamat"]);
         }
     }
-    //                  pesan
+//                  pesan
     if ($_POST['pesan']) {
         $pesan = $_POST['pesan'];
         if (!preg_match("/^[a-z]*$/", $_POST["pesan"])) {
             $arrError['pesan'] = "your pesan is invalid gaes !!!";
-        } else {
-            $arrError['pesan'] = htmlspecialchars($_POST['pesan']);
         }
     } else {
         $arrError['pesan'] = "please provide your pesan for registration!";
     }
 
+    //kirim data
+    if(array_filter($arrError)){
+        echo "<h6>please check your input</h6>";
+    }else{
+
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $alamat = mysqli_real_escape_string($conn, $_POST['alamat']);
+        $pesan = mysqli_real_escape_string($conn, $_POST['pesan']);
+
+        // create item into msql database
+        $tugas_isi_database = "INSERT INTO center(email, pesan, alamat) VALUES ('$email', '$pesan', '$alamat')";
+
+        if(mysqli_query($conn, $tugas_isi_database)){
+            header('Location: index.php');
+        }else {
+            echo 'query error: '. mysqli_error($conn);
+        }
+    }
 
 }
 ?>
@@ -56,7 +70,8 @@ if (isset($_POST['submit'])) {
         max-width: 460px;
         margin-inline: auto;
     }
-    .error-message{
+
+    .error-message {
         font-size: 15px;
         font-weight: bold;
     }
@@ -81,7 +96,6 @@ if (isset($_POST['submit'])) {
         </form>
     </div>
 </section>
-
 
 
 <?php require "modules/footer.php" ?>

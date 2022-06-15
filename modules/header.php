@@ -10,12 +10,12 @@
 <body class="grey lighten-4">
 <nav class="purple z-depth-0">
     <div class="container">
-        <a href="#" class="brand-logo brand-text">Malik Abdullah</a>
+        <a href="index.php" class="brand-logo brand-text">Malik Abdullah</a>
         <ul class="brand-text right">
             <li><a href="#" class="brand-text">Home</a></li>
             <li><a href="#" class="brand-text">About</a></li>
             <li><a href="#" class="brand-text">Footer</a></li>
-            <li><a href="#" class="brand-text btn">Contact Me</a></li>
+            <li><a href="add.php" class="brand-text btn">Isi Data</a></li>
         </ul>
     </div>
 </nav>
