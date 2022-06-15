@@ -39,7 +39,7 @@ $hasil_pemisahan_single_data_to_array = explode(" ", $items_form[1]["pesan"]);
                         </ul>
                     </div>
                     <div class="card-action right-align">
-                        <a href="details.php?id=<?php echo $aaa["id"];?>" target="_blank" class="brand-text">More Info</a>
+                        <a href="details.php?id=<?php echo $aaa["id"];?>" class="brand-text">More Info</a>
                     </div>
                 </div>
             </div>
